@@ -1,0 +1,53 @@
+<!-- <p>heroes works!</p>
+<h1>{{hero}}</h1>
+<h2>{{hero.id}}</h2>
+<h2>{{hero.name | uppercase}}</h2>
+
+<div class="div">
+    <span>id:{{hero.id}}</span>
+</div> -->
+<!-- 
+<div class="div">
+    <label>Name</label>
+    <input type="text" class="" placeholder="name" id="name" [(ngModel)]="hero.name">
+</div> -->
+<!-- <h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id:</span> {{hero.id}}</div> -->
+<!-- <div><span>name:</span>{{hero.name}}</div> -->
+<!-- 
+<div>
+    <label>Name</label>
+    <input type="text" id="name" [(ngModel)]="hero.name" placeholder="name">
+</div> -->
+
+<h2>My Heroes </h2>
+
+<div>
+    <label for="new-hero">Hero name :</label>
+    <input id="new-hero" #heroName />
+    <button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">Add hero</button>
+</div>
+
+
+<ul class="heroes">
+    <li *ngFor="let hero of heroes">
+        <a routerLink="/details/{{hero.id}}">&nbsp;
+            <span clas="badge">{{hero.id}}</span>{{hero.name}}
+        </a>
+        <button type="button" class="delete" (click)="delete(hero)" title="delete hero">X</button>
+    </li>
+</ul>
+
+
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+
+<!-- add details section -->
+
+<!-- <div *ngIf="selectedHero">
+    <h2>{{selectedHero.name | uppercase}}Details</h2>
+    <div>id:{{selectedHero.id}}</div>
+    <div>
+        <label for="hero-name">Hero name:</label>
+        <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+    </div>
+</div> -->
